@@ -1,0 +1,19 @@
+{
+  "name": "structualpatterns",
+  "version": "1.0.0",
+  "description": "Sturctual patterns in TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "adapter": "tsc adapter.ts --outDir dist && node dist/adapter.js",
+    "bridge": "tsc bridge.ts --outDir dist && node dist/bridge.js",
+    "decorator": "tsc decorator.ts --outDir dist && node dist/decorator.js",
+    "facade": "tsc facade.ts --outDir dist && node dist/facade.js",
+    "proxy": "tsc proxy.ts --outDir dist && node dist/proxy.js",
+    "all": "tsc && node dist/adapter.js && node dist/bridge.js && node dist/decorator.js && node dist/facade.js && node dist/proxy.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.8.2"
+  }
+}
