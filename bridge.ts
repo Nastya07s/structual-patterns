@@ -4,7 +4,7 @@ interface ColorInterface {
 }
 
 // The Shape Interface (abstaction)
-interface Shape {
+interface ShapeInterface {
     draw(): void
 }
 
@@ -22,7 +22,7 @@ class Red implements ColorInterface {
 }
 
 // implementetion
-class Circle implements Shape {
+class Circle implements ShapeInterface {
     private implementer: ColorInterface
 
     constructor(implementer: ColorInterface) {
@@ -34,7 +34,7 @@ class Circle implements Shape {
     }
 }
 
-class Square implements Shape {
+class Square implements ShapeInterface {
     private implementer: ColorInterface
 
     constructor(implementer: ColorInterface) {
@@ -50,8 +50,8 @@ const circle = new Circle(new Blue())
 
 const square = new Square(new Red())
 
-const shapes: Shape[] = [circle, square];
+const shapes: ShapeInterface[] = [circle, square];
 
-shapes.forEach((shape: Shape) => {
+shapes.forEach((shape: ShapeInterface) => {
     shape.draw()
 })
